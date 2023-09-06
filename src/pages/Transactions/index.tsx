@@ -2,6 +2,7 @@ import React from 'react'
 import { Header } from '../../components/Header'
 import { Summary } from '../../components/Summary'
 import { PriceHighlight, TransactionsContainer, TransactionsTable } from './styles'
+import { SearchForm } from './components/SearchForm'
 
 export const Transactions = () => {
   return (
@@ -9,7 +10,9 @@ export const Transactions = () => {
       <Header />
       <Summary />
 
+
       <TransactionsContainer>
+        <SearchForm />
         <TransactionsTable>
           <tbody>
             <tr>
