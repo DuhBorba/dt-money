@@ -18,7 +18,6 @@ export const Header = () => {
 
           <NewTransactionModal />
         </Dialog.Root>
-
       </HeaderContent>
     </HeaderContainer>
   )

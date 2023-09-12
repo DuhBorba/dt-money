@@ -5,7 +5,6 @@ import { priceFormatter } from '../../utils/formatter'
 import { useSummary } from '../../hooks/useSummary'
 
 export const Summary = () => {
-
   const summary = useSummary()
 
   return (
