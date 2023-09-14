@@ -1,6 +1,7 @@
-import React, { createContext } from 'react'
+import React from 'react'
 
 import { api } from '../lib/axios'
+import { createContext } from 'use-context-selector'
 
 interface Transaction {
   id: number
