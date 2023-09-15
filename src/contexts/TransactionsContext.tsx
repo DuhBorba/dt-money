@@ -21,6 +21,7 @@ interface CreateTransactionInput {
 
 interface TransactionContextType {
   transactions: Transaction[]
+  deleteTransaction: (id: number) => void
   fetchTransactions: (query?: string) => Promise<void>
   createTransaction: (data: CreateTransactionInput) => Promise<void>
 }
@@ -63,13 +64,26 @@ export function TransactionsProvider({ children }: TransactionProviderProps) {
     [],
   )
 
+  const deleteTransaction = React.useCallback(async (id: number) => {
+    await api.delete(`transactions/${id}`)
+
+    setTransactions((state) =>
+      state.filter((transaction) => transaction.id !== id),
+    )
+  }, [])
+
   React.useEffect(() => {
     fetchTransactions()
   }, [fetchTransactions])
 
   return (
     <TransactionsContext.Provider
-      value={{ transactions, fetchTransactions, createTransaction }}
+      value={{
+        transactions,
+        deleteTransaction,
+        fetchTransactions,
+        createTransaction,
+      }}
     >
       {children}
     </TransactionsContext.Provider>

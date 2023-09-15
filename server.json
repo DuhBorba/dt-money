@@ -1,20 +1,36 @@
 {
   "transactions": [
     {
-      "id": 1,
-      "description": "Desenvolvimento de site",
-      "type": "income",
-      "category": "Venda",
-      "price": 14000,
-      "createdAt": "2023-09-11T19:18:11.632Z"
+      "description": "Lanche",
+      "price": 5,
+      "category": "Alimentação",
+      "type": "outcome",
+      "createdAt": "2023-09-15T13:19:52.689Z",
+      "id": 1
     },
     {
-      "id": 2,
-      "description": "Lanche",
-      "type": "outcome",
+      "description": "Site",
+      "price": 1000,
+      "category": "Freelance",
+      "type": "income",
+      "createdAt": "2023-09-15T13:20:23.117Z",
+      "id": 2
+    },
+    {
+      "description": "Pastel",
+      "price": 10,
       "category": "Alimentação",
-      "price": 50,
-      "createdAt": "2023-09-11T18:18:11.632Z"
+      "type": "outcome",
+      "createdAt": "2023-09-15T13:20:35.024Z",
+      "id": 3
+    },
+    {
+      "description": "Curso",
+      "price": 200,
+      "category": "Curso",
+      "type": "outcome",
+      "createdAt": "2023-09-15T13:22:22.815Z",
+      "id": 4
     }
   ]
 }
